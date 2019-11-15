@@ -64,7 +64,7 @@ const SelectItem = ({ option_name }) => {
 const CheckBoxComp = ({ fieldname, fieldvalue, label, uploadData }) => {
     return (
         <span className="checkbox_comp">
-            <input type="checkbox" onClick={(e) => uploadData(fieldname, fieldvalue)} name={fieldname} value={fieldvalue} /><label>{label}</label>
+            <input type="checkbox" onClick={(e) => (e.target.checked) ? uploadData(fieldname, fieldvalue) : uploadData(fieldname, '')} name={fieldname} value={fieldvalue} /><label>{label}</label>
         </span>
     );
 }

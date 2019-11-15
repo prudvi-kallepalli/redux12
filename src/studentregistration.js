@@ -15,7 +15,7 @@ const StudentRegistrationForm = () => {
                 <CheckBox fieldname="firstlanguage" fieldvalue="telugu" label="Telugu" />
                 <CheckBox fieldname="secondlanguage" fieldvalue="english" label="English" />
                 <SelectField label="choose state:" fieldname="personstate" options={states_in_india} />
-                <FormButton shouldfill="firstname&&lastname&&phonenumber&&email&&gender&&personstate" label="submit" />
+                <FormButton shouldfill="firstname&&lastname&&phonenumber&&email&&gender&&personstate&&firstlanguage&&secondlanguage" label="submit" />
             </form>
         </div>
     );
