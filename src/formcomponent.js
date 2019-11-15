@@ -61,6 +61,13 @@ const SelectItem = ({ option_name }) => {
         <option value={option_name}>{option_name}</option>
     );
 }
+const CheckBoxComp = ({ fieldname, fieldvalue, label, uploadData }) => {
+    return (
+        <span className="checkbox_comp">
+            <input type="checkbox" onClick={(e) => uploadData(fieldname, fieldvalue)} name={fieldname} value={fieldvalue} /><label>{label}</label>
+        </span>
+    );
+}
 const ButtonComp = ({ shouldfill, label, formInformation }) => {
     const condition_parameters = shouldfill.split('&&');
     let flag;
@@ -103,5 +110,6 @@ const NumberField = connect(null, mapDispatchToProps)(NumberFieldComp);
 const EmailField = connect(null, mapDispatchToProps)(EmailComp);
 const RadioGroup = connect(null, mapDispatchToProps)(RadioGroupComp);
 const SelectField = connect(null, mapDispatchToProps)(SelectComp);
+const CheckBox = connect(null, mapDispatchToProps)(CheckBoxComp);
 const FormButton = connect(mapStateToProps, null)(ButtonComp);
-export { TextField, NumberField, EmailField, FormButton, RadioGroup, SelectField };
+export { TextField, NumberField, EmailField, FormButton, RadioGroup, SelectField, CheckBox };
