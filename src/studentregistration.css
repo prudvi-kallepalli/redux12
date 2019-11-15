@@ -1,0 +1,39 @@
+.form_container{
+    width: 400px;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #888888;
+    margin: 10% auto;
+    padding:2% 1%;
+    background-color: #d9d9d9;
+}
+.form_container>form .form_field{
+    display: block;
+    margin: 2px auto;
+    border: 0px;
+    box-shadow: 0px 0px 1px #888888;
+    width: 60%;
+    height: 25px;
+    padding-left: 5px;
+    border-radius: 2px;
+    font-family: monospace;
+}
+.form_container>form .radio_group{
+    margin: 5px auto;    
+    width: 300px;
+}
+.form_container>form .form_button{
+    display: block;
+    margin: 2px auto;
+    border: 0px;
+    border-radius: 3px;
+    //background-color: darkslategray;
+    //color: white;
+    padding: 2px 20px;
+    font-family: monospace;
+}
+.form_container>form .error_message{
+    color: red;
+    font-size: 12px;
+    text-align: center;
+}
