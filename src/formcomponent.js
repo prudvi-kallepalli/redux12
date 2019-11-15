@@ -49,6 +49,18 @@ const RadioGroupItem = ({ fieldname, itemname, uploadRadioItem }) => {
         </span>
     );
 }
+const SelectComp = ({ options, label, fieldname, uploadData }) => {
+    return (
+        <div className="SelectComp">
+            <label >{label}</label><select onChange={(e) => uploadData(fieldname, e.target.value)} name={fieldname}>{options.map((option_name, index) => <SelectItem key={index} option_name={option_name} />)}</select>
+        </div>
+    );
+}
+const SelectItem = ({ option_name }) => {
+    return (
+        <option value={option_name}>{option_name}</option>
+    );
+}
 const ButtonComp = ({ shouldfill, label, formInformation }) => {
     const condition_parameters = shouldfill.split('&&');
     let flag;
@@ -90,5 +102,6 @@ const TextField = connect(null, mapDispatchToProps)(FieldComp);
 const NumberField = connect(null, mapDispatchToProps)(NumberFieldComp);
 const EmailField = connect(null, mapDispatchToProps)(EmailComp);
 const RadioGroup = connect(null, mapDispatchToProps)(RadioGroupComp);
+const SelectField = connect(null, mapDispatchToProps)(SelectComp);
 const FormButton = connect(mapStateToProps, null)(ButtonComp);
-export { TextField, NumberField, EmailField, FormButton, RadioGroup };
+export { TextField, NumberField, EmailField, FormButton, RadioGroup, SelectField };
